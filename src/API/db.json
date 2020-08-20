@@ -1,0 +1,74 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "email": "asd",
+            "username": "asd",
+            "password": "asd"
+        }
+    ],
+    "food": [
+        {
+            "id": 1,
+            "type": "crepe",
+            "name": "The Estaminet",
+            "cookTime": "30 - 35 min",
+            "rating": 4.5,
+            "category": "Cafes",
+            "subCategory": "Creperies",
+            "price": 3,
+            "stock": 10
+        },
+        {
+            "id": 2,
+            "type": "patisserie",
+            "name": "Bagel Story",
+            "cookTime": "25 - 30 min",
+            "rating": 4.7,
+            "category": "Deli",
+            "subCategory": "Bagels",
+            "price": 4,
+            "stock": 10
+        },
+        {
+            "id": 3,
+            "type": "patiserrie",
+            "name": "Le Paris Dakar",
+            "cookTime": "40 - 60 min",
+            "rating": 4.6,
+            "category": "Creperies",
+            "subCategory": "Sandwich",
+            "price": 5,
+            "stock": 10
+        }
+    ],
+    "cart": [
+        {
+            "id": 1,
+            "userId": 1,
+            "type": "crepe",
+            "name": "The Estaminet",
+            "category": "Cafes",
+            "subCategory": "Creperies",
+            "quantity": 1
+        },
+        {
+            "id": 2,
+            "userId": 1,
+            "type": "patisserie",
+            "name": "Bagel Story",
+            "category": "Deli",
+            "subCategory": "Bagels",
+            "quantity": 1
+        },
+        {
+            "id": 3,
+            "userId": 1,
+            "type": "patiserrie",
+            "name": "Le Paris Dakar",
+            "category": "Creperies",
+            "subCategory": "Sandwich",
+            "quantity": 1
+        }
+    ]
+}
