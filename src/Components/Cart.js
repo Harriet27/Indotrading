@@ -1,5 +1,4 @@
 import React from 'react';
-import { ButtonGroup, Button } from '@material-ui/core';
 import {
     user,
     clock,
@@ -8,14 +7,53 @@ import {
     friesjpg,
     cheesejpg,
 } from '../Assets';
+import { useSelector, useDispatch } from 'react-redux';
+import { Logout } from '../Redux/Action';
+import { makeStyles } from '@material-ui/core/styles';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+
+const useStyles = makeStyles((theme) => ({
+    formControl: {
+      margin: theme.spacing(1),
+      minWidth: 120,
+    },
+    selectEmpty: {
+      marginTop: theme.spacing(2),
+    },
+  }));
 
 const Cart = () => {
+    const classes = useStyles();
+    const [age, setAge] = React.useState('');
+
+    const handleChange = (event) => {
+        setAge(event.target.value);
+    };
+
+    const dispatch = useDispatch();
+
+    const logged = useSelector((state) => state.auth.logged);
+
+    const handleLogout = (e) => {
+        dispatch(Logout());
+        e.preventDefault();
+    };
+
     return (
         <div style={styles.container}>
 
             <div style={{display:'flex', alignItems:'center'}}>
                 <div style={styles.icon}>
-                    <a href='/'><img src={user} alt='user' height={25}/></a>
+                    {
+                        logged
+                        ?
+                        <a href='/' onClick={handleLogout}><img src={user} alt='user' height={25}/></a>
+                        :
+                        <a href='/login'><img src={user} alt='user' height={25}/></a>
+                    }
                 </div>
                 <div style={styles.number}>
                     3
@@ -116,11 +154,26 @@ const Cart = () => {
             <div style={{display:'flex', flexDirection:'column'}}>
                 <div style={{margin:'30px 0px 0px 70px', fontSize:'22px', fontWeight:'600'}}>
                     Persons :
-                    <ButtonGroup variant="contained" style={{marginLeft:'70px'}}>
+                    {/* <ButtonGroup variant="contained" style={{marginLeft:'70px'}}>
                         <Button>-</Button>
                         <Button>0</Button>
                         <Button>+</Button>
-                    </ButtonGroup>
+                    </ButtonGroup> */}
+                    <FormControl className={classes.formControl} style={{marginLeft:'70px', marginTop:'-15px'}}>
+                      <InputLabel id="demo-simple-select-label">Select</InputLabel>
+                      <Select
+                        labelId="demo-simple-select-label"
+                        id="demo-simple-select"
+                        value={age}
+                        onChange={handleChange}
+                      >
+                        <MenuItem value={1}>1</MenuItem>
+                        <MenuItem value={2}>2</MenuItem>
+                        <MenuItem value={3}>3</MenuItem>
+                        <MenuItem value={4}>4</MenuItem>
+                        <MenuItem value={5}>5</MenuItem>
+                      </Select>
+                    </FormControl>
                 </div>
                 <div style={{margin:'30px 20px 20px 140px'}}>
                     <input type='button' value='Check Out' style={styles.button} />

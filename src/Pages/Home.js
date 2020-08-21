@@ -1,6 +1,4 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { FetchAll } from '../Redux/Action';
+import React from 'react';
 import {
     SearchBar,
     Jumbotron,
@@ -10,15 +8,6 @@ import {
 } from '../Components';
 
 const Home = () => {
-    const dispatch = useDispatch();
-
-    const foodList = useSelector((state) => state.food.foodList);
-    console.log(foodList);
-
-    useEffect(() => {
-        dispatch(FetchAll());
-    }, [dispatch]);
-
     return (
         <div style={{display:'flex'}}>
             <div>
