@@ -30,7 +30,7 @@ class Carousel extends Component {
 
     boxEnter1 = (e) => {
         this.setState({
-            bgColor1: "#F7DC6F",
+            bgColor1: "#FBD460",
         });
     };
     boxLeave1 = (e) => {
@@ -41,7 +41,7 @@ class Carousel extends Component {
 
     boxEnter2 = (e) => {
         this.setState({
-            bgColor2: "#F7DC6F",
+            bgColor2: "#FBD460",
         });
     };
     boxLeave2 = (e) => {
@@ -52,7 +52,7 @@ class Carousel extends Component {
 
     boxEnter3 = (e) => {
         this.setState({
-            bgColor3: "#F7DC6F",
+            bgColor3: "#FBD460",
         });
     };
     boxLeave3 = (e) => {
@@ -63,7 +63,7 @@ class Carousel extends Component {
 
     boxEnter4 = (e) => {
         this.setState({
-            bgColor4: "#F7DC6F",
+            bgColor4: "#FBD460",
         });
     };
     boxLeave4 = (e) => {
@@ -74,7 +74,7 @@ class Carousel extends Component {
 
     boxEnter5 = (e) => {
         this.setState({
-            bgColor5: "#F7DC6F",
+            bgColor5: "#FBD460",
         });
     };
     boxLeave5 = (e) => {
@@ -85,7 +85,7 @@ class Carousel extends Component {
 
     boxEnter6 = (e) => {
         this.setState({
-            bgColor6: "#F7DC6F",
+            bgColor6: "#FBD460",
         });
     };
     boxLeave6 = (e) => {
@@ -96,7 +96,7 @@ class Carousel extends Component {
 
     boxEnter7 = (e) => {
         this.setState({
-            bgColor7: "#F7DC6F",
+            bgColor7: "#FBD460",
         });
     };
     boxLeave7 = (e) => {
@@ -107,7 +107,7 @@ class Carousel extends Component {
 
     boxEnter8 = (e) => {
         this.setState({
-            bgColor8: "#F7DC6F",
+            bgColor8: "#FBD460",
         });
     };
     boxLeave8 = (e) => {

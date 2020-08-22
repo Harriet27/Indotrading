@@ -210,7 +210,7 @@ const styles = {
         fontSize: '20px',
         fontWeight: '250',
         borderRadius: '10px',
-        backgroundColor: 'gold',
+        backgroundColor: '#FBD460',
         padding: '0px 10px',
     },
     detail: {
@@ -224,7 +224,7 @@ const styles = {
     },
     button: {
         border: 'none',
-        backgroundColor: 'gold',
+        backgroundColor: '#FBD460',
         padding: '20px 30px',
         borderRadius: '25px',
         color: 'white',
