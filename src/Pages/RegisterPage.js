@@ -2,8 +2,17 @@ import React from 'react';
 import { FormGroup, Input, Button, Form, Label } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import profile from '../Assets/pp2.png';
+import Swal from 'sweetalert2';
 
 const RegisterPage = () => {
+    const handleRegister = () => {
+        Swal.fire(
+            'Success',
+            'Registration Successful!',
+            'success',
+        );
+    };
+
     return (
         <div>
             <div style={{textAlign: 'center'}}>
@@ -32,7 +41,7 @@ const RegisterPage = () => {
                     </FormGroup>
                     <div style={{display: 'flex', justifyContent: 'space-around'}}>
                         <Link to='/login'>
-                            <Button color='primary' type='submit' style={{borderRadius: '20px', padding: '12px'}}>
+                            <Button color='primary' type='submit' style={{borderRadius: '20px', padding: '12px'}} onClick={handleRegister}>
                                 Register
                             </Button>
                         </Link>

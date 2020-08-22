@@ -14,6 +14,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import Swal from 'sweetalert2';
 
 const useStyles = makeStyles((theme) => ({
     formControl: {
@@ -40,6 +41,14 @@ const Cart = () => {
     const handleLogout = (e) => {
         dispatch(Logout());
         e.preventDefault();
+    };
+
+    const handleCheckout = () => {
+        Swal.fire(
+            'Success',
+            'Checkout Successful!',
+            'success',
+        );
     };
 
     return (
@@ -154,11 +163,6 @@ const Cart = () => {
             <div style={{display:'flex', flexDirection:'column'}}>
                 <div style={{margin:'30px 0px 0px 70px', fontSize:'22px', fontWeight:'600'}}>
                     Persons :
-                    {/* <ButtonGroup variant="contained" style={{marginLeft:'70px'}}>
-                        <Button>-</Button>
-                        <Button>0</Button>
-                        <Button>+</Button>
-                    </ButtonGroup> */}
                     <FormControl className={classes.formControl} style={{marginLeft:'70px', marginTop:'-15px'}}>
                       <InputLabel id="demo-simple-select-label">Select</InputLabel>
                       <Select
@@ -181,7 +185,7 @@ const Cart = () => {
                     </FormControl>
                 </div>
                 <div style={{margin:'30px 20px 20px 140px'}}>
-                    <input type='button' value='Check Out' style={styles.button} />
+                    <input type='button' value='Check Out' style={styles.button} onClick={handleCheckout} />
                 </div>
             </div>
 
