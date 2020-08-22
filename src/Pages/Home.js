@@ -53,7 +53,7 @@ const styles = {
         width: 'fit-content',
     },
     cart: {
-        display: 'flex'
+        display: 'flex',
     },
 };
 

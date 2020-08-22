@@ -17,13 +17,102 @@ class Carousel extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            bgColor: "",
+            bgColor1: "",
+            bgColor2: "",
+            bgColor3: "",
+            bgColor4: "",
+            bgColor5: "",
+            bgColor6: "",
+            bgColor7: "",
+            bgColor8: "",
         };
     };
 
-    boxClick = (e) => {
+    boxEnter1 = (e) => {
         this.setState({
-            bgColor: "gold",
+            bgColor1: "#F7DC6F",
+        });
+    };
+    boxLeave1 = (e) => {
+        this.setState({
+            bgColor1: "white",
+        });
+    };
+
+    boxEnter2 = (e) => {
+        this.setState({
+            bgColor2: "#F7DC6F",
+        });
+    };
+    boxLeave2 = (e) => {
+        this.setState({
+            bgColor2: "white",
+        });
+    };
+
+    boxEnter3 = (e) => {
+        this.setState({
+            bgColor3: "#F7DC6F",
+        });
+    };
+    boxLeave3 = (e) => {
+        this.setState({
+            bgColor3: "white",
+        });
+    };
+
+    boxEnter4 = (e) => {
+        this.setState({
+            bgColor4: "#F7DC6F",
+        });
+    };
+    boxLeave4 = (e) => {
+        this.setState({
+            bgColor4: "white",
+        });
+    };
+
+    boxEnter5 = (e) => {
+        this.setState({
+            bgColor5: "#F7DC6F",
+        });
+    };
+    boxLeave5 = (e) => {
+        this.setState({
+            bgColor5: "white",
+        });
+    };
+
+    boxEnter6 = (e) => {
+        this.setState({
+            bgColor6: "#F7DC6F",
+        });
+    };
+    boxLeave6 = (e) => {
+        this.setState({
+            bgColor6: "white",
+        });
+    };
+
+    boxEnter7 = (e) => {
+        this.setState({
+            bgColor7: "#F7DC6F",
+        });
+    };
+    boxLeave7 = (e) => {
+        this.setState({
+            bgColor7: "white",
+        });
+    };
+
+    boxEnter8 = (e) => {
+        this.setState({
+            bgColor8: "#F7DC6F",
+        });
+    };
+    boxLeave8 = (e) => {
+        this.setState({
+            bgColor8: "white",
         });
     };
 
@@ -42,12 +131,12 @@ class Carousel extends Component {
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
-                        backgroundColor: this.state.bgColor,
-                    }} className='card' onClick={this.boxClick}>
+                        backgroundColor: this.state.bgColor1,
+                    }} className='card' onMouseEnter={this.boxEnter1} onMouseLeave={this.boxLeave1}>
                         <div style={styles.item2}>
                             <img src={plate} alt='plate' height={27} />
                         </div>
-                        <div style={{margin:'10px', fontSize:'12px'}}>
+                        <div style={styles.category}>
                             All
                         </div>
                     </div>
@@ -59,12 +148,12 @@ class Carousel extends Component {
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
-                        backgroundColor: this.state.bgColor,
-                    }} className='card' onClick={this.boxClick}>
+                        backgroundColor: this.state.bgColor2,
+                    }} className='card' onMouseEnter={this.boxEnter2} onMouseLeave={this.boxLeave2}>
                         <div style={styles.item2}>
                             <img src={pizza} alt='plate' height={22} />
                         </div>
-                        <div style={{margin:'10px', fontSize:'12px'}}>
+                        <div style={styles.category}>
                             Pizza
                         </div>
                     </div>
@@ -76,12 +165,12 @@ class Carousel extends Component {
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
-                        backgroundColor: this.state.bgColor,
-                    }} className='card' onClick={this.boxClick}>
+                        backgroundColor: this.state.bgColor3,
+                    }} className='card' onMouseEnter={this.boxEnter3} onMouseLeave={this.boxLeave3}>
                         <div style={styles.item2}>
                             <img src={rice} alt='plate' height={22} />
                         </div>
-                        <div style={{margin:'10px', fontSize:'12px'}}>
+                        <div style={styles.category}>
                             Asian
                         </div>
                     </div>
@@ -93,12 +182,12 @@ class Carousel extends Component {
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
-                        backgroundColor: this.state.bgColor,
-                    }} className='card' onClick={this.boxClick}>
+                        backgroundColor: this.state.bgColor4,
+                    }} className='card' onMouseEnter={this.boxEnter4} onMouseLeave={this.boxLeave4}>
                         <div style={styles.item2}>
                             <img src={burger} alt='plate' height={22} />
                         </div>
-                        <div style={{margin:'10px', fontSize:'12px'}}>
+                        <div style={styles.category}>
                             Burgers
                         </div>
                     </div>
@@ -110,8 +199,8 @@ class Carousel extends Component {
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
-                        backgroundColor: this.state.bgColor,
-                    }} className='card' onClick={this.boxClick}>
+                        backgroundColor: this.state.bgColor5,
+                    }} className='card' onMouseEnter={this.boxEnter5} onMouseLeave={this.boxLeave5}>
                         <div style={styles.item2}>
                             <img src={meat} alt='plate' height={22} />
                         </div>
@@ -127,8 +216,8 @@ class Carousel extends Component {
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
-                        backgroundColor: this.state.bgColor,
-                    }} className='card' onClick={this.boxClick}>
+                        backgroundColor: this.state.bgColor6,
+                    }} className='card' onMouseEnter={this.boxEnter6} onMouseLeave={this.boxLeave6}>
                         <div style={styles.item2}>
                             <img src={dessert} alt='plate' height={22} />
                         </div>
@@ -144,8 +233,8 @@ class Carousel extends Component {
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
-                        backgroundColor: this.state.bgColor,
-                    }} className='card' onClick={this.boxClick}>
+                        backgroundColor: this.state.bgColor7,
+                    }} className='card' onMouseEnter={this.boxEnter7} onMouseLeave={this.boxLeave7}>
                         <div style={styles.item2}>
                             <img src={pineapple} alt='plate' height={22} />
                         </div>
@@ -161,8 +250,8 @@ class Carousel extends Component {
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
-                        backgroundColor: this.state.bgColor,
-                    }} className='card' onClick={this.boxClick}>
+                        backgroundColor: this.state.bgColor8,
+                    }} className='card' onMouseEnter={this.boxEnter8} onMouseLeave={this.boxLeave8}>
                         <div style={styles.item2}>
                             <img src={sushi} alt='plate' height={22} />
                         </div>
@@ -209,10 +298,15 @@ const styles = {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: 'white',
     },
     category: {
         margin: '10px',
         fontSize: '12px',
+        color: 'dimgrey',
+    },
+    bg: {
+        backgroundColor: 'white',
     },
 };
 
